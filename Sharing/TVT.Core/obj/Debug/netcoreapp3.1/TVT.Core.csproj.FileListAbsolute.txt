@@ -1,0 +1,5 @@
+D:\tai.tran\DotNet\TVT.Microservice\Sharing\TVT.Core\bin\Debug\netcoreapp3.1\TVT.Core.deps.json
+D:\tai.tran\DotNet\TVT.Microservice\Sharing\TVT.Core\bin\Debug\netcoreapp3.1\TVT.Core.dll
+D:\tai.tran\DotNet\TVT.Microservice\Sharing\TVT.Core\obj\Debug\netcoreapp3.1\TVT.Core.csprojAssemblyReference.cache
+D:\tai.tran\DotNet\TVT.Microservice\Sharing\TVT.Core\obj\Debug\netcoreapp3.1\TVT.Core.AssemblyInfoInputs.cache
+D:\tai.tran\DotNet\TVT.Microservice\Sharing\TVT.Core\obj\Debug\netcoreapp3.1\TVT.Core.AssemblyInfo.cs
