@@ -1,0 +1,16 @@
+services:
+  simple.catalog.api:
+    build:
+      context: D:\tai.tran\DotNet\SimpleMicroservice
+      dockerfile: Services/Catalog/Simple.Catalog.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: simplecatalogapi
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\tai.tran\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\tai.tran\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

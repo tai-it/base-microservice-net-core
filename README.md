@@ -1,1 +1,0 @@
-# base-microservice-net-core

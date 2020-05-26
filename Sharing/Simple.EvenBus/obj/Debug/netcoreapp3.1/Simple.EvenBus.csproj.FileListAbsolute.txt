@@ -1,0 +1,9 @@
+D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\bin\Debug\netcoreapp3.1\Simple.EvenBus.deps.json
+D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\bin\Debug\netcoreapp3.1\Simple.EvenBus.dll
+D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\bin\Debug\netcoreapp3.1\Simple.EvenBus.pdb
+D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\obj\Debug\netcoreapp3.1\Simple.EvenBus.csprojAssemblyReference.cache
+D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\obj\Debug\netcoreapp3.1\Simple.EvenBus.AssemblyInfoInputs.cache
+D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\obj\Debug\netcoreapp3.1\Simple.EvenBus.AssemblyInfo.cs
+D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\obj\Debug\netcoreapp3.1\Simple.EvenBus.csproj.CoreCompileInputs.cache
+D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\obj\Debug\netcoreapp3.1\Simple.EvenBus.dll
+D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\obj\Debug\netcoreapp3.1\Simple.EvenBus.pdb

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  simple.catalog.api:
+    image: ${DOCKER_REGISTRY-}simplecatalogapi
+    build:
+      context: .
+      dockerfile: Services/Catalog/Simple.Catalog.Api/Dockerfile

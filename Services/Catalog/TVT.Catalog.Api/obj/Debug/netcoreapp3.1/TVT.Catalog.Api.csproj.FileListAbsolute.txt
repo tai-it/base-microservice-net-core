@@ -1,9 +1,0 @@
-D:\tai.tran\DotNet\TVT.Microservice\Services\Catalog\TVT.Catalog.Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
-D:\tai.tran\DotNet\TVT.Microservice\Services\Catalog\TVT.Catalog.Api\bin\Debug\netcoreapp3.1\appsettings.json
-D:\tai.tran\DotNet\TVT.Microservice\Services\Catalog\TVT.Catalog.Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
-D:\tai.tran\DotNet\TVT.Microservice\Services\Catalog\TVT.Catalog.Api\bin\Debug\netcoreapp3.1\TVT.Catalog.Api.exe
-D:\tai.tran\DotNet\TVT.Microservice\Services\Catalog\TVT.Catalog.Api\obj\Debug\netcoreapp3.1\TVT.Catalog.Api.AssemblyInfoInputs.cache
-D:\tai.tran\DotNet\TVT.Microservice\Services\Catalog\TVT.Catalog.Api\obj\Debug\netcoreapp3.1\TVT.Catalog.Api.AssemblyInfo.cs
-D:\tai.tran\DotNet\TVT.Microservice\Services\Catalog\TVT.Catalog.Api\obj\Debug\netcoreapp3.1\TVT.Catalog.Api.RazorTargetAssemblyInfo.cache
-D:\tai.tran\DotNet\TVT.Microservice\Services\Catalog\TVT.Catalog.Api\obj\Debug\netcoreapp3.1\staticwebassets\TVT.Catalog.Api.StaticWebAssets.Manifest.cache
-D:\tai.tran\DotNet\TVT.Microservice\Services\Catalog\TVT.Catalog.Api\obj\Debug\netcoreapp3.1\staticwebassets\TVT.Catalog.Api.StaticWebAssets.xml
