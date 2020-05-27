@@ -42,6 +42,7 @@
             return new ResponseModel()
             {
                 StatusCode = System.Net.HttpStatusCode.OK,
+                Data = new CategoryViewModel(category),
                 Message = "Category deleted successfully"
             };
         }

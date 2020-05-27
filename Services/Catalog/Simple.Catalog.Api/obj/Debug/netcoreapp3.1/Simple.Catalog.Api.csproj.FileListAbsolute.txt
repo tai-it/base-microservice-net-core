@@ -15,6 +15,7 @@ D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\De
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
@@ -27,6 +28,7 @@ D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\De
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
@@ -53,10 +55,14 @@ D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\De
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Simple.Core.dll
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Simple.EventBus.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Simple.Core.pdb
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Simple.EventBus.pdb
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\obj\Debug\netcoreapp3.1\Simple.Catalog.Api.csprojAssemblyReference.cache
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\obj\Debug\netcoreapp3.1\Simple.Catalog.Api.AssemblyInfoInputs.cache
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\obj\Debug\netcoreapp3.1\Simple.Catalog.Api.AssemblyInfo.cs
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\obj\Debug\netcoreapp3.1\Simple.Catalog.Api.csproj.CoreCompileInputs.cache
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\obj\Debug\netcoreapp3.1\Simple.Catalog.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\obj\Debug\netcoreapp3.1\Simple.Catalog.Api.RazorTargetAssemblyInfo.cache
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\obj\Debug\netcoreapp3.1\Simple.Catalog.Api.csproj.CopyComplete
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\obj\Debug\netcoreapp3.1\staticwebassets\Simple.Catalog.Api.StaticWebAssets.Manifest.cache
@@ -64,7 +70,3 @@ D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\obj\De
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\obj\Debug\netcoreapp3.1\Simple.Catalog.Api.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\obj\Debug\netcoreapp3.1\Simple.Catalog.Api.pdb
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\obj\Debug\netcoreapp3.1\Simple.Catalog.Api.genruntimeconfig.cache
-D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Simple.EventBus.dll
-D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\bin\Debug\netcoreapp3.1\Simple.EventBus.pdb
-D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\obj\Debug\netcoreapp3.1\Simple.Catalog.Api.csproj.CoreCompileInputs.cache
-D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api\obj\Debug\netcoreapp3.1\Simple.Catalog.Api.MvcApplicationPartsAssemblyInfo.cache

@@ -2,10 +2,10 @@
 {
     using AutoMapper;
     using MediatR;
+    using Microsoft.EntityFrameworkCore;
     using Simple.Catalog.Api.Domain.Context;
     using Simple.Catalog.Api.Domain.Entities;
     using Simple.Core.Models.Common;
-    using Simple.EventBus.Abstractions;
     using System;
     using System.Threading;
     using System.Threading.Tasks;
@@ -38,8 +38,8 @@
 
             return new ResponseModel()
             {
-                StatusCode = System.Net.HttpStatusCode.OK,
-                Message = "The category was created successfully"
+                StatusCode = System.Net.HttpStatusCode.Created,
+                Data = new CategoryViewModel(category),
             };
         }
     }

@@ -3,6 +3,7 @@
     using MediatR;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
+    using Simple.Catalog.Api.Infrastructure.Filters;
     using Simple.Catalog.Api.Services.Categories;
     using Simple.Core.Models.Common;
     using System;
@@ -12,7 +13,7 @@
     [Route("api/categories")]
     [Consumes("application/json")]
     [Produces("application/json")]
-    //[Authorize]
+    [ValidateModel]
     public class CategoryController : ControllerBase
     {
         private readonly IMediator mediator;
@@ -23,39 +24,48 @@
         }
 
         [HttpGet]
-        public async Task<PagedList<CategoryViewModel>> GetAsync([FromQuery] CategoryPageListRequest request, CancellationToken cancellationToken)
+        [AllowAnonymous]
+        public async Task<PagedList<CategoryViewModel>> GetAsync([FromQuery] CategoryPagedListRequest request, CancellationToken cancellationToken)
         {
             return await this.mediator.Send(request, cancellationToken);
         }
 
         [HttpGet("{id}")]
-        public async Task<CategoryViewModel> GetAsync(Guid id, CancellationToken cancellationToken)
+        [AllowAnonymous]
+        public async Task<IActionResult> GetAsync(Guid id, CancellationToken cancellationToken)
         {
             var request = new CategoryGetByIdRequest { Id = id };
-            return await this.mediator.Send(request, cancellationToken);
+            var responseModel = await this.mediator.Send(request, cancellationToken);
+            return new CustomActionResult(responseModel);
         }
 
         [HttpPost]
-        public async Task<ResponseModel> PostAsync([FromBody] CategoryCreateRequest request, CancellationToken cancellationToken)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> PostAsync([FromBody] CategoryCreateRequest request, CancellationToken cancellationToken)
         {
-            return await this.mediator.Send(request, cancellationToken);
+            var responseModel = await this.mediator.Send(request, cancellationToken);
+            return new CustomActionResult(responseModel);
         }
 
         [HttpPut("{id}")]
-        public async Task<ResponseModel> PutAsync(Guid id, [FromBody] CategoryEditRequest request, CancellationToken cancellationToken)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> PutAsync(Guid id, [FromBody] CategoryEditRequest request, CancellationToken cancellationToken)
         {
             request.Id = id;
-            return await this.mediator.Send(request, cancellationToken);
+            var responseModel = await this.mediator.Send(request, cancellationToken);
+            return new CustomActionResult(responseModel);
         }
 
         [HttpDelete("{id}")]
-        public async Task<ResponseModel> DeleteAsync(Guid id, CancellationToken cancellationToken)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> DeleteAsync(Guid id, CancellationToken cancellationToken)
         {
             var request = new CategoryDeleteRequest()
             {
                 Id = id
             };
-            return await this.mediator.Send(request, cancellationToken);
+            var responseModel = await this.mediator.Send(request, cancellationToken);
+            return new CustomActionResult(responseModel);
         }
     }
 }

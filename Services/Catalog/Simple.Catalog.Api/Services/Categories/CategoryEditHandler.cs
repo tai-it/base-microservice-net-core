@@ -30,7 +30,7 @@
                 return new ResponseModel()
                 {
                     StatusCode = System.Net.HttpStatusCode.NotFound,
-                    Message = "Could not found this category"
+                    Message = "Category not found"
                 };
             }
 
@@ -41,7 +41,7 @@
             return new ResponseModel()
             {
                 StatusCode = System.Net.HttpStatusCode.OK,
-                Message = "Category updated successfully"
+                Data = new CategoryViewModel(category)
             };
         }
     }

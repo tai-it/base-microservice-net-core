@@ -1,9 +1,0 @@
-D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\bin\Debug\netcoreapp3.1\Simple.EventBus.deps.json
-D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\bin\Debug\netcoreapp3.1\Simple.EventBus.dll
-D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\bin\Debug\netcoreapp3.1\Simple.EventBus.pdb
-D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\obj\Debug\netcoreapp3.1\Simple.EventBus.AssemblyInfoInputs.cache
-D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\obj\Debug\netcoreapp3.1\Simple.EventBus.AssemblyInfo.cs
-D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\obj\Debug\netcoreapp3.1\Simple.EventBus.csproj.CoreCompileInputs.cache
-D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\obj\Debug\netcoreapp3.1\Simple.EventBus.dll
-D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\obj\Debug\netcoreapp3.1\Simple.EventBus.pdb
-D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.EvenBus\obj\Debug\netcoreapp3.1\Simple.EventBus.csprojAssemblyReference.cache

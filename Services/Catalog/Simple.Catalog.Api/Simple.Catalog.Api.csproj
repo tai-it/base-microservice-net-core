@@ -30,6 +30,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Sharing\Simple.Core\Simple.Core.csproj" />
     <ProjectReference Include="..\..\..\Sharing\Simple.EvenBus\Simple.EventBus.csproj" />
+    <ProjectReference Include="..\..\..\Sharing\Simple.EventBus\Simple.EventBus.csproj" />
   </ItemGroup>
 
 

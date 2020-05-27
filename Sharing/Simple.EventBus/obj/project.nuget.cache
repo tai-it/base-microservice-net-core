@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "a+uDv/8Yvd1JpuX5FJlxtZN3UX7p+FPePmPtxd9QZz6ThdluEYVOZXTAdC1o6LdJUHxLBr3qsi3u07DiOmK5mg==",
+  "success": true,
+  "projectFilePath": "D:\\tai.tran\\DotNet\\SimpleMicroservice\\Sharing\\Simple.EventBus\\Simple.EventBus.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tai.tran\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\tai.tran\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

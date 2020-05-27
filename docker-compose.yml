@@ -6,3 +6,25 @@ services:
     build:
       context: .
       dockerfile: Services/Catalog/Simple.Catalog.Api/Dockerfile
+    networks:
+      - simple-brigde
+  simple.identity.api:
+    image: ${DOCKER_REGISTRY-}simpleidentityapi
+    build:
+      context: .
+      dockerfile: Services/Identity/Simple.Identity.Api/Dockerfile
+    networks:
+      - simple-brigde
+  db1:
+    container_name: ${DOCKER_REGISTRY-}mssqldb
+    image: microsoft/mssql-server-linux:2017-latest
+    volumes:
+      - mssql-db-data:/var/opt/mssql
+    networks:
+      - simple-brigde
+volumes:
+  mssql-db-data:
+
+networks:
+  simple-brigde:
+    driver: bridge

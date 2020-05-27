@@ -1,4 +1,21 @@
+networks:
+  simple-brigde:
+    driver: bridge
 services:
+  db1:
+    container_name: mssqldb
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: simple@!@#123
+      MSSQL_TCP_PORT: 1433
+    image: microsoft/mssql-server-linux:2017-latest
+    networks:
+      simple-brigde: {}
+    ports:
+    - published: 1433
+      target: 1433
+    volumes:
+    - mssql-db-data:/var/opt/mssql:rw
   simple.catalog.api:
     build:
       context: D:\tai.tran\DotNet\SimpleMicroservice
@@ -7,10 +24,34 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: https://+:443;http://+:80
     image: simplecatalogapi
+    networks:
+      simple-brigde: {}
     ports:
-    - target: 80
-    - target: 443
+    - published: 1111
+      target: 80
+    - published: 1112
+      target: 443
+    volumes:
+    - C:\Users\tai.tran\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\tai.tran\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  simple.identity.api:
+    build:
+      context: D:\tai.tran\DotNet\SimpleMicroservice
+      dockerfile: Services/Identity/Simple.Identity.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: simpleidentityapi
+    networks:
+      simple-brigde: {}
+    ports:
+    - published: 2221
+      target: 80
+    - published: 2222
+      target: 443
     volumes:
     - C:\Users\tai.tran\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
     - C:\Users\tai.tran\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
 version: '3.4'
+volumes:
+  mssql-db-data: {}

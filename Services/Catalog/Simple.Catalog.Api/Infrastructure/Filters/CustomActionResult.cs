@@ -1,0 +1,44 @@
+﻿namespace Simple.Catalog.Api.Infrastructure.Filters
+{
+    using Microsoft.AspNetCore.Mvc;
+    using Simple.Core.Models.Common;
+    using System.Threading.Tasks;
+
+    public class CustomActionResult : IActionResult
+    {
+        private readonly ResponseModel _responseModel;
+
+        public CustomActionResult(ResponseModel responseModel)
+        {
+            _responseModel = responseModel;
+        }
+
+        public async Task ExecuteResultAsync(ActionContext context)
+        {
+            ObjectResult objectResult;
+            switch (_responseModel.StatusCode)
+            {
+                case System.Net.HttpStatusCode.OK:
+                case System.Net.HttpStatusCode.Created:
+                    objectResult = new ObjectResult(_responseModel.Data)
+                    {
+                        StatusCode = (int)_responseModel.StatusCode
+                    };
+                    break;
+                case System.Net.HttpStatusCode.NotFound:
+                    objectResult = new ObjectResult(_responseModel.Message)
+                    {
+                        StatusCode = (int)_responseModel.StatusCode
+                    };
+                    break;
+                default:
+                    objectResult = new ObjectResult(_responseModel.Message)
+                    {
+                        StatusCode = (int)_responseModel.StatusCode
+                    };
+                    break;
+            }
+            await objectResult.ExecuteResultAsync(context);
+        }
+    }
+}
