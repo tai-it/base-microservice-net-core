@@ -9,7 +9,7 @@
     {
         public Product() : base()
         {
-
+            ProductInCategories = new List<ProductInCategory>();
         }
 
         public string Name { get; set; }

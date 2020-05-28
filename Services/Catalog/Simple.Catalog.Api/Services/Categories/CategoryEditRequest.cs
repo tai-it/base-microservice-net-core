@@ -15,8 +15,7 @@
         public Guid Id { get; set; }
 
         [Required(ErrorMessage = "Name can not be blank")]
-        [MinLength(3, ErrorMessage = "Name must be greater than 3 characters")]
-        [MaxLength(100, ErrorMessage = "Name must be less than 100 characters")]
+        [StringLength(100, ErrorMessage = "Category name must be 3 - 100 characters", MinimumLength = 3)]
         public string Name { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)

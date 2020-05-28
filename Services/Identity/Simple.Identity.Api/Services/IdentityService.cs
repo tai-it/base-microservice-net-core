@@ -3,7 +3,6 @@
     using Microsoft.AspNetCore.Identity;
     using Microsoft.Extensions.Configuration;
     using Microsoft.IdentityModel.Tokens;
-    using Newtonsoft.Json;
     using Simple.Core.Models.Common;
     using Simple.Identity.Api.Domain.Entities;
     using Simple.Identity.Api.Models;
@@ -64,7 +63,9 @@
             var user = new ApplicationUser
             {
                 UserName = model.Email,
-                Email = model.Email
+                Email = model.Email,
+                PhoneNumber = model.PhoneNumber ?? null,
+                Address = model.Address ?? null
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);
@@ -72,16 +73,27 @@
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, false);
+                await _userManager.AddToRoleAsync(user, CommonConstants.Roles.MEMBER);
                 return new ResponseModel()
                 {
                     StatusCode = System.Net.HttpStatusCode.OK,
-                    Data = GenerateJwtToken(model.Email, user, new string[] { "Member" })
+                    Data = GenerateJwtToken(model.Email, user, new string[] { CommonConstants.Roles.MEMBER })
                 };
             }
+
+            var errors = result.Errors;
+
+            var message = string.Empty;
+
+            foreach (var error in errors)
+            {
+                message += error.Description;
+            }
+
             return new ResponseModel()
             {
                 StatusCode = System.Net.HttpStatusCode.BadRequest,
-                Message = "Invalid inputs format"
+                Message = message
             };
         }
 

@@ -6648,8 +6648,8 @@
     },
     "Simple.EventBus/1.0.0": {
       "type": "project",
-      "path": "../../../Sharing/Simple.EvenBus/Simple.EventBus.csproj",
-      "msbuildProject": "../../../Sharing/Simple.EvenBus/Simple.EventBus.csproj"
+      "path": "../../../Sharing/Simple.EventBus/Simple.EventBus.csproj",
+      "msbuildProject": "../../../Sharing/Simple.EventBus/Simple.EventBus.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6699,9 +6699,6 @@
           "projectReferences": {
             "D:\\tai.tran\\DotNet\\SimpleMicroservice\\Sharing\\Simple.Core\\Simple.Core.csproj": {
               "projectPath": "D:\\tai.tran\\DotNet\\SimpleMicroservice\\Sharing\\Simple.Core\\Simple.Core.csproj"
-            },
-            "D:\\tai.tran\\DotNet\\SimpleMicroservice\\Sharing\\Simple.EvenBus\\Simple.EventBus.csproj": {
-              "projectPath": "D:\\tai.tran\\DotNet\\SimpleMicroservice\\Sharing\\Simple.EvenBus\\Simple.EventBus.csproj"
             },
             "D:\\tai.tran\\DotNet\\SimpleMicroservice\\Sharing\\Simple.EventBus\\Simple.EventBus.csproj": {
               "projectPath": "D:\\tai.tran\\DotNet\\SimpleMicroservice\\Sharing\\Simple.EventBus\\Simple.EventBus.csproj"

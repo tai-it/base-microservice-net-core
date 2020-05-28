@@ -1,6 +1,7 @@
 ﻿namespace Simple.Identity.Api.Domain.Entities.Context
 {
     using Microsoft.AspNetCore.Identity;
+    using Simple.Core.Models.Common;
     using System.Threading.Tasks;
 
     public class DummyData
@@ -11,20 +12,15 @@
         {
             context.Database.EnsureCreated();
 
-
-            string role1 = "Admin";
-
-            string role2 = "Member";
-
             string password = "P@$$w0rd";
 
-            if (await roleManager.FindByNameAsync(role1) == null)
+            if (await roleManager.FindByNameAsync(CommonConstants.Roles.ADMIN) == null)
             {
-                await roleManager.CreateAsync(new IdentityRole(role1));
+                await roleManager.CreateAsync(new IdentityRole(CommonConstants.Roles.ADMIN));
             }
-            if (await roleManager.FindByNameAsync(role2) == null)
+            if (await roleManager.FindByNameAsync(CommonConstants.Roles.MEMBER) == null)
             {
-                await roleManager.CreateAsync(new IdentityRole(role2));
+                await roleManager.CreateAsync(new IdentityRole(CommonConstants.Roles.MEMBER));
             }
 
             if (await userManager.FindByNameAsync("admin1@phungdkh.com.vn") == null)
@@ -40,7 +36,7 @@
                 if (result.Succeeded)
                 {
                     await userManager.AddPasswordAsync(user, password);
-                    await userManager.AddToRoleAsync(user, role1);
+                    await userManager.AddToRoleAsync(user, CommonConstants.Roles.ADMIN);
                 }
             }
 
@@ -57,7 +53,7 @@
                 if (result.Succeeded)
                 {
                     await userManager.AddPasswordAsync(user, password);
-                    await userManager.AddToRoleAsync(user, role1);
+                    await userManager.AddToRoleAsync(user, CommonConstants.Roles.ADMIN);
                 }
             }
         }

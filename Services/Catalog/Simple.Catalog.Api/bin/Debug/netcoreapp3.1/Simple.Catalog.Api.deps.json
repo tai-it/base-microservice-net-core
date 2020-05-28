@@ -1641,6 +1641,17 @@
           "Simple.Core.dll": {}
         }
       },
+      "Simple.EventBus/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "Simple.EventBus.dll": {}
+        },
+        "compile": {
+          "Simple.EventBus.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Antiforgery.dll": {}
@@ -3200,12 +3211,6 @@
           "WindowsBase.dll": {}
         },
         "compileOnly": true
-      },
-      "Simple.EventBus/1.0.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
-        },
-        "compileOnly": true
       }
     }
   },
@@ -4133,6 +4138,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "Simple.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Simple.EventBus/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5434,11 +5444,6 @@
     },
     "WindowsBase/4.0.0.0": {
       "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Simple.EventBus/1.0.0": {
-      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

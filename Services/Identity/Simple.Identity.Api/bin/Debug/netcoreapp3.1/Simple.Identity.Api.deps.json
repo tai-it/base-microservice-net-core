@@ -1787,12 +1787,15 @@
           "Simple.Core.dll": {}
         }
       },
-      "Simple.EventBus.Reference/1.0.0.0": {
+      "Simple.EventBus/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
         "runtime": {
-          "Simple.EventBus.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Simple.EventBus.dll": {}
+        },
+        "compile": {
+          "Simple.EventBus.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -3330,12 +3333,6 @@
           "WindowsBase.dll": {}
         },
         "compileOnly": true
-      },
-      "Simple.EventBus/1.0.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
-        },
-        "compileOnly": true
       }
     }
   },
@@ -4349,8 +4346,8 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Simple.EventBus.Reference/1.0.0.0": {
-      "type": "reference",
+    "Simple.EventBus/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     },
@@ -5631,11 +5628,6 @@
     },
     "WindowsBase/4.0.0.0": {
       "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Simple.EventBus/1.0.0": {
-      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

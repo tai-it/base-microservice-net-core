@@ -40,7 +40,7 @@
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = CommonConstants.Roles.ADMIN)]
         public async Task<IActionResult> PostAsync([FromBody] CategoryCreateRequest request, CancellationToken cancellationToken)
         {
             var responseModel = await this.mediator.Send(request, cancellationToken);
@@ -48,7 +48,7 @@
         }
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = CommonConstants.Roles.ADMIN)]
         public async Task<IActionResult> PutAsync(Guid id, [FromBody] CategoryEditRequest request, CancellationToken cancellationToken)
         {
             request.Id = id;
@@ -57,7 +57,7 @@
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = CommonConstants.Roles.ADMIN)]
         public async Task<IActionResult> DeleteAsync(Guid id, CancellationToken cancellationToken)
         {
             var request = new CategoryDeleteRequest()

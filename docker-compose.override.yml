@@ -1,16 +1,6 @@
 version: '3.4'
 
 services:
-  simple.catalog.api:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
-    ports:
-      - "1111:80"
-      - "1112:443"
-    volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
   simple.identity.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -21,6 +11,16 @@ services:
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+  simple.catalog.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "1111:80"
+      - "1112:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
   db1:
     environment:
       MSSQL_SA_PASSWORD: "simple@!@#123"
@@ -28,4 +28,3 @@ services:
       MSSQL_TCP_PORT: 1433
     ports:
       - "1433:1433"
-    

@@ -11,6 +11,7 @@
     [Route("api/account")]
     [Consumes("application/json")]
     [Produces("application/json")]
+    [ValidateModel]
     public class AccountController : ControllerBase
     {
         private readonly IIdentityService<ApplicationUser> _identityService;

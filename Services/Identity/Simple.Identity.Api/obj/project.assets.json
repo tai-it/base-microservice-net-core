@@ -7013,8 +7013,8 @@
     },
     "Simple.EventBus/1.0.0": {
       "type": "project",
-      "path": "../../../Sharing/Simple.EvenBus/Simple.EventBus.csproj",
-      "msbuildProject": "../../../Sharing/Simple.EvenBus/Simple.EventBus.csproj"
+      "path": "../../../Sharing/Simple.EventBus/Simple.EventBus.csproj",
+      "msbuildProject": "../../../Sharing/Simple.EventBus/Simple.EventBus.csproj"
     }
   },
   "projectFileDependencyGroups": {

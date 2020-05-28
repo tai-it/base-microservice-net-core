@@ -1,4 +1,5 @@
 ﻿using Simple.Catalog.Api.Domain.Entities;
+using System;
 
 namespace Simple.Catalog.Api.Services.Products
 {
@@ -13,11 +14,14 @@ namespace Simple.Catalog.Api.Services.Products
         {
             if (product != null)
             {
+                Id = product.Id;
                 Name = product.Name;
                 Price = product.Price;
                 Thumbnail = product.Thumbnail;
             }
         }
+
+        public Guid Id { get; set; }
 
         public string Name { get; set; } = string.Empty;
 
