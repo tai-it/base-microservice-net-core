@@ -12,7 +12,7 @@
     using System.Threading;
     using System.Threading.Tasks;
 
-    public class CategoryPagedListHandler : IRequestHandler<CategoryPagedListRequest, PagedList<CategoryViewModel>>
+    public class CategoryPagedListHandler : IRequestHandler<CategoryPagedListRequest, PagedList<CategoryViewBaseModel>>
     {
         private readonly AppCatalogDbContext db;
         private readonly IMapper mapper;
@@ -25,11 +25,12 @@
             this.mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
-        public async Task<PagedList<CategoryViewModel>> Handle(CategoryPagedListRequest request, CancellationToken cancellationToken)
+        public async Task<PagedList<CategoryViewBaseModel>> Handle(CategoryPagedListRequest request, CancellationToken cancellationToken)
         {
-            var list = await this.db.Categories.Where(
-                    x => (string.IsNullOrEmpty(request.Query)) || (x.Name.Contains(request.Query))
-                    ).Select(x => new CategoryViewModel(x)).ToListAsync();
+            var list = await this.db.Categories
+                .Where(x => !x.IsDeleted)
+                    .Where(x => (string.IsNullOrEmpty(request.Query)) || (x.Name.Contains(request.Query)))
+                        .Select(x => new CategoryViewBaseModel(x)).ToListAsync();
 
             var viewModelProperties = this.GetAllPropertyNameOfViewModel();
             var sortPropertyName = !string.IsNullOrEmpty(request.SortName) ? request.SortName.ToLower() : string.Empty;
@@ -40,17 +41,17 @@
                 matchedPropertyName = "Name";
             }
 
-            var viewModelType = typeof(CategoryViewModel);
+            var viewModelType = typeof(CategoryViewBaseModel);
             var sortProperty = viewModelType.GetProperty(matchedPropertyName);
 
             list = request.IsDesc ? list.OrderByDescending(x => sortProperty.GetValue(x, null)).ToList() : list.OrderBy(x => sortProperty.GetValue(x, null)).ToList();
 
-            return new PagedList<CategoryViewModel>(list, request.Offset ?? CommonConstants.Config.DEFAULT_SKIP, request.Limit ?? CommonConstants.Config.DEFAULT_TAKE);
+            return new PagedList<CategoryViewBaseModel>(list, request.Offset ?? CommonConstants.Config.DEFAULT_SKIP, request.Limit ?? CommonConstants.Config.DEFAULT_TAKE);
         }
 
         private List<string> GetAllPropertyNameOfViewModel()
         {
-            var categoryViewModel = new CategoryViewModel();
+            var categoryViewModel = new CategoryViewBaseModel();
             var type = categoryViewModel.GetType();
 
             return ReflectionUtilities.GetAllPropertyNamesOfType(type);

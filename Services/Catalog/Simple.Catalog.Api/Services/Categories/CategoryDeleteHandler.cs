@@ -36,13 +36,15 @@
                 };
             }
 
-            this.db.Categories.Remove(category);
+            category.IsDeleted = true;
+            category.DeletedOn = DateTime.Now;
+
             await this.db.SaveChangesAsync(cancellationToken);
 
             return new ResponseModel()
             {
                 StatusCode = System.Net.HttpStatusCode.OK,
-                Data = new CategoryViewModel(category),
+                Data = new CategoryViewBaseModel(category),
                 Message = "Category deleted successfully"
             };
         }

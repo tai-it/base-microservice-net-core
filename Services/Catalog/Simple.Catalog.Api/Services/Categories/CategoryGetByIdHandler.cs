@@ -6,6 +6,7 @@
     using Simple.Catalog.Api.Domain.Context;
     using Simple.Core.Models.Common;
     using System;
+    using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
 
@@ -25,7 +26,11 @@
 
         public async Task<ResponseModel> Handle(CategoryGetByIdRequest request, CancellationToken cancellationToken)
         {
-            var category = await this.db.Categories.FirstOrDefaultAsync(x => x.Id == request.Id);
+            var category = await this.db.Categories
+                .Where(x => x.Id == request.Id && !x.IsDeleted)
+                    .Include(x => x.ProductInCategories)
+                        .ThenInclude(x => x.Product)
+                            .FirstOrDefaultAsync();
 
             if (category == null)
             {
@@ -39,7 +44,7 @@
             return new ResponseModel()
             { 
                 StatusCode = System.Net.HttpStatusCode.OK,
-                Data = new CategoryViewModel(category)
+                Data = new CategoryViewDetailModel(category)
             };
         }
     }

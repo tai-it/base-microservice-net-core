@@ -3,14 +3,14 @@
     using Simple.Catalog.Api.Domain.Entities;
     using System;
 
-    public class CategoryViewModel
+    public class CategoryViewBaseModel
     {
-        public CategoryViewModel()
+        public CategoryViewBaseModel()
         {
 
         }
 
-        public CategoryViewModel(Category category) : this()
+        public CategoryViewBaseModel(Category category) : this()
         {
             if (category != null)
             {

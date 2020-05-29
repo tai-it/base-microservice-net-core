@@ -25,14 +25,15 @@
 
         public async Task<PagedList<ProductViewModel>> Handle(ProductPagedListRequest request, CancellationToken cancellationToken)
         {
-            var list = await this.db.Products.Where(
-                     x => (string.IsNullOrEmpty(request.Query)) || (x.Name.Contains(request.Query))
-                     ).Select(x => new ProductViewModel(x)).ToListAsync();
+            var list = await this.db.Products
+                .Where(x => !x.IsDeleted)
+                    .Where(x => (string.IsNullOrEmpty(request.Query)) || (x.Name.Contains(request.Query)))
+                        .Select(x => new ProductViewModel(x)).ToListAsync();
 
             var viewModelProperties = this.GetAllPropertyNameOfViewModel();
             var sortPropertyName = !(string.IsNullOrEmpty(request.SortName)) ? request.SortName.ToLower() : string.Empty;
             var matchedPropertyName = viewModelProperties.FirstOrDefault(x => x == sortPropertyName);
-            
+
             if (string.IsNullOrEmpty(matchedPropertyName))
             {
                 matchedPropertyName = "Name";

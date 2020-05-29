@@ -33,7 +33,8 @@
                 };
             }
 
-            this.db.Products.Remove(product);
+            product.IsDeleted = true;
+            product.DeletedOn = DateTime.Now;
 
             await this.db.SaveChangesAsync(cancellationToken);
 

@@ -3,7 +3,7 @@
     using MediatR;
     using Simple.Core.Models.Common;
 
-    public class CategoryPagedListRequest : BaseRequestModel, IRequest<PagedList<CategoryViewModel>>
+    public class CategoryPagedListRequest : BaseRequestModel, IRequest<PagedList<CategoryViewBaseModel>>
     {
     }
 }

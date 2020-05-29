@@ -25,7 +25,7 @@
 
         [HttpGet]
         [AllowAnonymous]
-        public async Task<PagedList<CategoryViewModel>> GetAsync([FromQuery] CategoryPagedListRequest request, CancellationToken cancellationToken)
+        public async Task<PagedList<CategoryViewBaseModel>> GetAsync([FromQuery] CategoryPagedListRequest request, CancellationToken cancellationToken)
         {
             return await this.mediator.Send(request, cancellationToken);
         }
