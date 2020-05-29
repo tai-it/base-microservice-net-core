@@ -52,6 +52,24 @@ services:
     volumes:
     - C:\Users\tai.tran\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
     - C:\Users\tai.tran\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  simple.media.api:
+    build:
+      context: D:\tai.tran\DotNet\SimpleMicroservice
+      dockerfile: Services/Media/Simple.Media.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: simplemediaapi
+    networks:
+      simple-brigde: {}
+    ports:
+    - published: 3331
+      target: 80
+    - published: 3332
+      target: 443
+    volumes:
+    - C:\Users\tai.tran\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\tai.tran\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
 version: '3.4'
 volumes:
   mssql-db-data: {}

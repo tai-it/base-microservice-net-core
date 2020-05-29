@@ -15,6 +15,13 @@ services:
       dockerfile: Services/Identity/Simple.Identity.Api/Dockerfile
     networks:
       - simple-brigde
+  simple.media.api:
+    image: ${DOCKER_REGISTRY-}simplemediaapi
+    build:
+      context: .
+      dockerfile: Services/Media/Simple.Media.Api/Dockerfile
+    networks:
+      - simple-brigde
   db1:
     container_name: ${DOCKER_REGISTRY-}mssqldb
     image: microsoft/mssql-server-linux:2017-latest

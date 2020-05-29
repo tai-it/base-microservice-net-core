@@ -15,11 +15,11 @@
 
             if (file.Length > 0)
             {
-                using (var fileStream = new FileStream(Path.Combine(filePath, string.Format(fileName)), FileMode.Create))
+                using (var fileStream = new FileStream(Path.Combine(filePath, fileName), FileMode.Create))
                 {
                     file.CopyTo(fileStream);
                 }
-                returnPath = string.Format("/Files/{0}/{1}", folder, string.Format(fileName));
+                returnPath = string.Format("/Files/{0}/{1}", folder, fileName);
             }
 
             return returnPath;

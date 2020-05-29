@@ -48,3 +48,6 @@ D:\tai.tran\DotNet\SimpleMicroservice\bin\Debug\Simple.EventBus.pdb
 D:\tai.tran\DotNet\SimpleMicroservice\obj\Debug\docker-compose.dcprojAssemblyReference.cache
 D:\tai.tran\DotNet\SimpleMicroservice\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 D:\tai.tran\DotNet\SimpleMicroservice\obj\Debug\docker-compose.dcproj.CopyComplete
+D:\tai.tran\DotNet\SimpleMicroservice\bin\Debug\Simple.Media.Api.exe
+D:\tai.tran\DotNet\SimpleMicroservice\bin\Debug\Simple.Media.Api.dll
+D:\tai.tran\DotNet\SimpleMicroservice\bin\Debug\Simple.Media.Api.pdb

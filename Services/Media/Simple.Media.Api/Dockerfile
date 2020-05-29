@@ -8,6 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["Services/Media/Simple.Media.Api/Simple.Media.Api.csproj", "Services/Media/Simple.Media.Api/"]
+COPY ["Sharing/Simple.Core/Simple.Core.csproj", "Sharing/Simple.Core/"]
 RUN dotnet restore "Services/Media/Simple.Media.Api/Simple.Media.Api.csproj"
 COPY . .
 WORKDIR "/src/Services/Media/Simple.Media.Api"

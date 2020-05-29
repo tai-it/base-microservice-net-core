@@ -10,8 +10,14 @@
 
         public class Roles
         {
+            public const string SUPER_ADMIN = "Super Admin";
             public const string ADMIN = "Admin";
             public const string MEMBER = "Member";
+        }
+
+        public class Messages
+        {
+            public const string FILE_REQUIRED = "File is required";
         }
     }
 }
