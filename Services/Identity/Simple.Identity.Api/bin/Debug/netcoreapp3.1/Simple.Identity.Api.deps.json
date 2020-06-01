@@ -274,7 +274,7 @@
           "System.Threading.Tasks.Parallel": "4.0.4.0",
           "System.Threading.Thread": "4.1.2.0",
           "System.Threading.ThreadPool": "4.1.2.0",
-          "System.Threading.Timer": "4.1.2.0",
+          "System.Threading.Timer.Reference": "4.1.2.0",
           "System.Transactions": "4.0.0.0",
           "System.Transactions.Local": "4.0.2.0",
           "System.ValueTuple": "4.0.3.0",
@@ -506,6 +506,21 @@
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {}
         }
       },
+      "Microsoft.AspNetCore.JsonPatch/3.1.4": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.21604"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Mvc.Abstractions/2.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Routing.Abstractions": "2.2.0",
@@ -529,6 +544,22 @@
           "Microsoft.Extensions.Logging.Abstractions": "3.1.4",
           "System.Diagnostics.DiagnosticSource": "4.7.1",
           "System.Threading.Tasks.Extensions": "4.5.1"
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.1.4": {
+        "dependencies": {
+          "Microsoft.AspNetCore.JsonPatch": "3.1.4",
+          "Newtonsoft.Json": "12.0.3",
+          "Newtonsoft.Json.Bson": "1.0.2"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.21604"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {}
         }
       },
       "Microsoft.AspNetCore.ResponseCaching.Abstractions/2.2.0": {
@@ -1052,6 +1083,20 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Newtonsoft.Json.Bson/1.0.2": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.2.22727"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
       "runtime.native.System/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
@@ -1090,6 +1135,96 @@
             "assetType": "native",
             "fileVersion": "4.6.25512.1"
           }
+        }
+      },
+      "Serilog/2.9.0": {
+        "runtime": {
+          "lib/netstandard2.0/Serilog.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.9.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.dll": {}
+        }
+      },
+      "Serilog.Extensions.Logging/3.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "3.1.4",
+          "Serilog": "2.9.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Extensions.Logging.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "3.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Extensions.Logging.dll": {}
+        }
+      },
+      "Serilog.Filters.Expressions/2.1.0": {
+        "dependencies": {
+          "Serilog": "2.9.0",
+          "Superpower": "2.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Filters.Expressions.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Filters.Expressions.dll": {}
+        }
+      },
+      "Serilog.Sinks.File/3.2.0": {
+        "dependencies": {
+          "Serilog": "2.9.0",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
+          "System.Text.Encoding.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Timer": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Serilog.Sinks.File.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Serilog.Sinks.File.dll": {}
+        }
+      },
+      "Serilog.Sinks.RollingFile/3.3.0": {
+        "dependencies": {
+          "Serilog.Sinks.File": "3.2.0",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Text.Encoding.Extensions": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Serilog.Sinks.RollingFile.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "3.3.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Serilog.Sinks.RollingFile.dll": {}
+        }
+      },
+      "Superpower/2.3.0": {
+        "runtime": {
+          "lib/netstandard2.0/Superpower.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Superpower.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -1679,6 +1814,13 @@
         }
       },
       "System.Threading.Tasks.Extensions/4.5.1": {},
+      "System.Threading.Timer/4.0.1": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Xml.ReaderWriter/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -1756,12 +1898,18 @@
           "MediatR": "8.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "8.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.4",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.4",
           "Microsoft.EntityFrameworkCore": "3.1.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.4",
           "Microsoft.Extensions.DependencyInjection": "3.1.4",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.4",
+          "Microsoft.Extensions.Logging": "3.1.4",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.10.9",
           "Newtonsoft.Json": "12.0.3",
+          "Serilog": "2.9.0",
+          "Serilog.Extensions.Logging": "3.0.1",
+          "Serilog.Filters.Expressions": "2.1.0",
+          "Serilog.Sinks.RollingFile": "3.3.0",
           "Simple.Core": "1.0.0",
           "Simple.EventBus": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "6.6.0"
@@ -3232,7 +3380,7 @@
         },
         "compileOnly": true
       },
-      "System.Threading.Timer/4.1.2.0": {
+      "System.Threading.Timer.Reference/4.1.2.0": {
         "compile": {
           "System.Threading.Timer.dll": {}
         },
@@ -3496,6 +3644,13 @@
       "path": "microsoft.aspnetcore.identity.entityframeworkcore/3.1.3",
       "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.3.1.3.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.JsonPatch/3.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZNy+dmMOog7PyPCVLfweNYOP3rZzo4eFFrIKS5QjMd/7w2AJ12aVu9rLpZOV0XuQWxUPE7g9ZT75D05Z7wvfxw==",
+      "path": "microsoft.aspnetcore.jsonpatch/3.1.4",
+      "hashPath": "microsoft.aspnetcore.jsonpatch.3.1.4.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Mvc.Abstractions/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -3509,6 +3664,13 @@
       "sha512": "sha512-/8sr8ixIUD57UFwUntha9bOwex7/AkZfdk1f9oNJG1Ek7p/uuKVa7fuHmYZpQOf35Oxrt+2Ku4WPwMSbNxOuWg==",
       "path": "microsoft.aspnetcore.mvc.core/2.2.5",
       "hashPath": "microsoft.aspnetcore.mvc.core.2.2.5.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OL8SnwFxtFZbcb0z17v0Zf2HMIi/BTbgnxLv1NU+/OEnZEtf0a4XND21IS/bcQoPp/84szhsYQnbxGzCCWQlfg==",
+      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/3.1.4",
+      "hashPath": "microsoft.aspnetcore.mvc.newtonsoftjson.3.1.4.nupkg.sha512"
     },
     "Microsoft.AspNetCore.ResponseCaching.Abstractions/2.2.0": {
       "type": "package",
@@ -3825,6 +3987,13 @@
       "path": "newtonsoft.json/12.0.3",
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
+    "Newtonsoft.Json.Bson/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QYFyxhaABwmq3p/21VrZNYvCg3DaEoN/wUuw5nmfAf0X3HLjgupwhkEWdgfb9nvGAUIv3osmZoD3kKl4jxEmYQ==",
+      "path": "newtonsoft.json.bson/1.0.2",
+      "hashPath": "newtonsoft.json.bson.1.0.2.nupkg.sha512"
+    },
     "runtime.native.System/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -3859,6 +4028,48 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "Serilog/2.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QzcrD33A3+CsVvwi1I5CSei67ikQnkGrw7SscgL+vZTghaC2aNYg8fiUcedXHzKJFNjgje9rBjzwYGQTKEaXaA==",
+      "path": "serilog/2.9.0",
+      "hashPath": "serilog.2.9.0.nupkg.sha512"
+    },
+    "Serilog.Extensions.Logging/3.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U0xbGoZuxJRjE3C5vlCfrf9a4xHTmbrCXKmaA14cHAqiT1Qir0rkV7Xss9GpPJR3MRYH19DFUUqZ9hvWeJrzdQ==",
+      "path": "serilog.extensions.logging/3.0.1",
+      "hashPath": "serilog.extensions.logging.3.0.1.nupkg.sha512"
+    },
+    "Serilog.Filters.Expressions/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e0ZaK+NWx6+j71xB5dRXohdreSeHgMJ9mp4giSp83/4UC8VsJWDH+CAT1YVXsyINAR9IQznXllnJ0e5j+BvwzA==",
+      "path": "serilog.filters.expressions/2.1.0",
+      "hashPath": "serilog.filters.expressions.2.1.0.nupkg.sha512"
+    },
+    "Serilog.Sinks.File/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VHbo68pMg5hwSWrzLEdZv5b/rYmIgHIRhd4d5rl8GnC5/a8Fr+RShT5kWyeJOXax1el6mNJ+dmHDOVgnNUQxaw==",
+      "path": "serilog.sinks.file/3.2.0",
+      "hashPath": "serilog.sinks.file.3.2.0.nupkg.sha512"
+    },
+    "Serilog.Sinks.RollingFile/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2lT5X1r3GH4P0bRWJfhA7etGl8Q2Ipw9AACvtAHWRUSpYZ42NGVyHoVs2ALBZ/cAkkS+tA4jl80Zie144eLQPg==",
+      "path": "serilog.sinks.rollingfile/3.3.0",
+      "hashPath": "serilog.sinks.rollingfile.3.3.0.nupkg.sha512"
+    },
+    "Superpower/2.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-L7ZLWjec5aPWWebsOKM6+8SdobSFMPJFIS8S8TT46oH2iELA70H95spRMeP1yPH9nDL/o+XYP29DPtVwVdzPeA==",
+      "path": "superpower/2.3.0",
+      "hashPath": "superpower.2.3.0.nupkg.sha512"
     },
     "System.AppContext/4.1.0": {
       "type": "package",
@@ -4307,6 +4518,13 @@
       "sha512": "sha512-WSKUTtLhPR8gllzIWO2x6l4lmAIfbyMAiTlyXAis4QBDonXK4b4S6F8zGARX4/P8wH3DH+sLdhamCiHn+fTU1A==",
       "path": "system.threading.tasks.extensions/4.5.1",
       "hashPath": "system.threading.tasks.extensions.4.5.1.nupkg.sha512"
+    },
+    "System.Threading.Timer/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-saGfUV8uqVW6LeURiqxcGhZ24PzuRNaUBtbhVeuUAvky1naH395A/1nY0P2bWvrw/BreRtIB/EzTDkGBpqCwEw==",
+      "path": "system.threading.timer/4.0.1",
+      "hashPath": "system.threading.timer.4.0.1.nupkg.sha512"
     },
     "System.Xml.ReaderWriter/4.3.0": {
       "type": "package",
@@ -5546,7 +5764,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Threading.Timer/4.1.2.0": {
+    "System.Threading.Timer.Reference/4.1.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

@@ -3,6 +3,7 @@
     using MediatR;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Logging;
     using Simple.Catalog.Api.Infrastructure.Filters;
     using Simple.Catalog.Api.Services.Categories;
     using Simple.Core.Models.Common;

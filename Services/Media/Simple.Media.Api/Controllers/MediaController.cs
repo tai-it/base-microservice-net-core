@@ -74,8 +74,8 @@
         private string GetMineType(string fileName)
         {
             string mineType = "application/unknown";
-            string ext = Path.GetExtension(fileName).ToLower();
-            Microsoft.Win32.RegistryKey regKey = Microsoft.Win32.Registry.ClassesRoot.OpenSubKey(ext);
+            string extension = Path.GetExtension(fileName).ToLower();
+            Microsoft.Win32.RegistryKey regKey = Microsoft.Win32.Registry.ClassesRoot.OpenSubKey(extension);
             if (regKey != null && regKey.GetValue("Content Type") != null)
                 mineType = regKey.GetValue("Content Type").ToString();
             return mineType;

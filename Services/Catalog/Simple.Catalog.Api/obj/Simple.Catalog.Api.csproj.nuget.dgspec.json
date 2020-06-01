@@ -65,6 +65,10 @@
               "target": "Package",
               "version": "[3.1.4, )"
             },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.4, )"
@@ -87,6 +91,10 @@
               "target": "Package",
               "version": "[3.1.4, )"
             },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.10.9, )"
@@ -94,6 +102,22 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.9.0, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Filters.Expressions": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Serilog.Sinks.RollingFile": {
+              "target": "Package",
+              "version": "[3.3.0, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",

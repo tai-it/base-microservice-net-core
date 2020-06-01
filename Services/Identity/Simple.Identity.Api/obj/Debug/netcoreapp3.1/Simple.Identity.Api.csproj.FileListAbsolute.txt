@@ -79,3 +79,12 @@ D:\tai.tran\DotNet\SimpleMicroservice\Services\Identity\Simple.Identity.Api\obj\
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Identity\Simple.Identity.Api\obj\Debug\netcoreapp3.1\Simple.Identity.Api.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Identity\Simple.Identity.Api\obj\Debug\netcoreapp3.1\Simple.Identity.Api.pdb
 D:\tai.tran\DotNet\SimpleMicroservice\Services\Identity\Simple.Identity.Api\obj\Debug\netcoreapp3.1\Simple.Identity.Api.genruntimeconfig.cache
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Identity\Simple.Identity.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Identity\Simple.Identity.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Identity\Simple.Identity.Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Identity\Simple.Identity.Api\bin\Debug\netcoreapp3.1\Serilog.dll
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Identity\Simple.Identity.Api\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Identity\Simple.Identity.Api\bin\Debug\netcoreapp3.1\Serilog.Filters.Expressions.dll
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Identity\Simple.Identity.Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Identity\Simple.Identity.Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
+D:\tai.tran\DotNet\SimpleMicroservice\Services\Identity\Simple.Identity.Api\bin\Debug\netcoreapp3.1\Superpower.dll

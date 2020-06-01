@@ -15,17 +15,39 @@ namespace Simple.Catalog.Api
     using Microsoft.IdentityModel.Tokens;
     using System.Text;
     using System;
+    using Serilog;
+    using Simple.Catalog.Api.Infrastructure.Filters;
+    using System.IO;
 
     public class Startup
     {
         public Startup(IWebHostEnvironment env)
         {
             var builder = new ConfigurationBuilder()
-              .SetBasePath(env.ContentRootPath)
+              .SetBasePath(Directory.GetCurrentDirectory())
               .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
 
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
+
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Information()
+                .WriteTo.Logger(log => log.Filter.ByIncludingOnly("@Level = 'Information'")
+                    .WriteTo.RollingFile(
+                        pathFormat: "Logs//Informations//log-information-{Date}.txt",
+                        outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}"
+                    ))
+                .WriteTo.Logger(log => log.Filter.ByIncludingOnly("@Level = 'Warning'")
+                    .WriteTo.RollingFile(
+                        pathFormat: "Logs//Warnings//log-warning-{Date}.txt",
+                        outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}"
+                    ))
+                .WriteTo.Logger(log => log.Filter.ByIncludingOnly("@Level = 'Error'")
+                    .WriteTo.RollingFile(
+                        pathFormat: "Logs//Errors//log-error-{Date}.txt",
+                        outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}"
+                    ))
+                .CreateLogger();
         }
 
         public static IConfigurationRoot Configuration;
@@ -33,7 +55,14 @@ namespace Simple.Catalog.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(
+                options =>
+                {
+                    options.Filters.Add(typeof(HttpGlobalExceptionFilter));
+                })
+                .AddNewtonsoftJson(options =>
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                );
 
             services.AddSingleton(Configuration);
 
@@ -82,6 +111,9 @@ namespace Simple.Catalog.Api
                     .AllowAnyHeader()
                     .AllowCredentials());
             });
+
+            // Logging
+            services.AddSingleton(Log.Logger);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

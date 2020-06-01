@@ -6,3 +6,4 @@ D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.Core\obj\Debug\netcoreapp3.
 D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.Core\obj\Debug\netcoreapp3.1\Simple.Core.csproj.CoreCompileInputs.cache
 D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.Core\obj\Debug\netcoreapp3.1\Simple.Core.dll
 D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.Core\obj\Debug\netcoreapp3.1\Simple.Core.pdb
+D:\tai.tran\DotNet\SimpleMicroservice\Sharing\Simple.Core\obj\Debug\netcoreapp3.1\Simple.Core.csprojAssemblyReference.cache
