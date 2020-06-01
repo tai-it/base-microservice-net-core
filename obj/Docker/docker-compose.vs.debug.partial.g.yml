@@ -12,19 +12,19 @@ services:
     environment:
       - DOTNET_USE_POLLING_FILE_WATCHER=1
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
-      - NUGET_FALLBACK_PACKAGES=
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_simple.catalog.api$
     volumes:
       - D:\tai.tran\DotNet\SimpleMicroservice\Services\Catalog\Simple.Catalog.Api:/app
       - D:\tai.tran\DotNet\SimpleMicroservice:/src
       - C:\Users\tai.tran\vsdbg\vs2017u5:/remote_debugger:rw
-      - C:\Users\tai.tran\.nuget\packages\:/root/.nuget/packages:ro
+#$nuget_volume_mapping_simple.catalog.api$
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
 
     entrypoint: tail -f /dev/null
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/netcoreapp3.1/Simple.Catalog.Api.dll\""
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_simple.catalog.api$ \"/app/bin/Debug/netcoreapp3.1/Simple.Catalog.Api.dll\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true
@@ -39,19 +39,19 @@ services:
     environment:
       - DOTNET_USE_POLLING_FILE_WATCHER=1
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
-      - NUGET_FALLBACK_PACKAGES=
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_simple.identity.api$
     volumes:
       - D:\tai.tran\DotNet\SimpleMicroservice\Services\Identity\Simple.Identity.Api:/app
       - D:\tai.tran\DotNet\SimpleMicroservice:/src
       - C:\Users\tai.tran\vsdbg\vs2017u5:/remote_debugger:rw
-      - C:\Users\tai.tran\.nuget\packages\:/root/.nuget/packages:ro
+#$nuget_volume_mapping_simple.identity.api$
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
 
     entrypoint: tail -f /dev/null
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"\""
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_simple.identity.api$ \"\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true
@@ -67,19 +67,19 @@ services:
     environment:
       - DOTNET_USE_POLLING_FILE_WATCHER=1
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
-      - NUGET_FALLBACK_PACKAGES=
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_simple.media.api$
     volumes:
       - D:\tai.tran\DotNet\SimpleMicroservice\Services\Media\Simple.Media.Api:/app
       - D:\tai.tran\DotNet\SimpleMicroservice:/src
       - C:\Users\tai.tran\vsdbg\vs2017u5:/remote_debugger:rw
-      - C:\Users\tai.tran\.nuget\packages\:/root/.nuget/packages:ro
+#$nuget_volume_mapping_simple.media.api$
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
 
     entrypoint: tail -f /dev/null
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"\""
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_simple.media.api$ \"\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true

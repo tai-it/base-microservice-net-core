@@ -3,8 +3,9 @@
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
-    using Simple.Catalog.Api.Infrastructure.Filters;
     using Simple.Identity.Api.Domain.Entities;
+    using Simple.Identity.Api.Infrastructure.ActionResults;
+    using Simple.Identity.Api.Infrastructure.Filters;
     using Simple.Identity.Api.Models;
     using Simple.Identity.Api.Services;
 

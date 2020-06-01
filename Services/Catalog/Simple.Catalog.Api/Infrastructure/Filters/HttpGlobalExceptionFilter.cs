@@ -26,7 +26,7 @@
                 context.Exception,
                 context.Exception.Message);
 
-            if (context.Exception.GetType() == typeof(SimpleDomainException))
+            if (context.Exception.GetType() == typeof(SimpleCatalogDomainException))
             {
                 var json = new JsonErrorResponse
                 {

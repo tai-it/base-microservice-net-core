@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Services",
+    "\\Services\\Catalog",
+    "\\Services\\Catalog\\Simple.Catalog.Api"
   ],
+  "SelectedNode": "\\Services\\Catalog\\Simple.Catalog.Api\\Simple.Catalog.Api.csproj",
   "PreviewInSolutionExplorer": false
 }

@@ -32,8 +32,16 @@
           "Microsoft.EntityFrameworkCore.Design": "3.1.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.4",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.10.9",
+          "Serilog": "2.9.0",
+          "Serilog.Extensions.Logging": "3.0.1",
+          "Serilog.Filters.Expressions": "2.1.0",
+          "Serilog.Sinks.RollingFile": "3.3.0",
           "Simple.Catalog.Api": "1.0.0",
           "Simple.Core": "1.0.0",
+          "Swashbuckle.AspNetCore": "5.4.1",
+          "Swashbuckle.AspNetCore.Swagger": "5.4.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "5.4.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "5.4.1",
           "System.IdentityModel.Tokens.Jwt": "6.6.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "3.1.0.0",
@@ -741,6 +749,7 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
+      "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
       "Microsoft.Extensions.Caching.Abstractions/3.1.4": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "3.1.4"
@@ -1062,6 +1071,17 @@
       },
       "Microsoft.NETCore.Platforms/2.0.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.OpenApi/1.1.4": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+        }
+      },
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.10.9": {},
       "Microsoft.Win32.Registry/4.5.0": {
         "dependencies": {
@@ -1225,6 +1245,53 @@
         },
         "compile": {
           "lib/netstandard2.0/Superpower.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore/5.4.1": {
+        "dependencies": {
+          "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "5.4.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "5.4.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "5.4.1"
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/5.4.1": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.1.4"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "assemblyVersion": "5.4.1.0",
+            "fileVersion": "5.4.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/5.4.1": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "5.4.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "assemblyVersion": "5.4.1.0",
+            "fileVersion": "5.4.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/5.4.1": {
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "assemblyVersion": "5.4.1.0",
+            "fileVersion": "5.4.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -1912,6 +1979,10 @@
           "Serilog.Sinks.RollingFile": "3.3.0",
           "Simple.Core": "1.0.0",
           "Simple.EventBus": "1.0.0",
+          "Swashbuckle.AspNetCore": "5.4.1",
+          "Swashbuckle.AspNetCore.Swagger": "5.4.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "5.4.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "5.4.1",
           "System.IdentityModel.Tokens.Jwt": "6.6.0"
         },
         "runtime": {
@@ -3777,6 +3848,13 @@
       "path": "microsoft.entityframeworkcore.sqlserver/3.1.4",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.3.1.4.nupkg.sha512"
     },
+    "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
+      "path": "microsoft.extensions.apidescription.server/3.0.0",
+      "hashPath": "microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.Caching.Abstractions/3.1.4": {
       "type": "package",
       "serviceable": true,
@@ -3966,6 +4044,13 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
+    "Microsoft.OpenApi/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6SW0tpbJslc8LAY1XniRfLVcJa7bJUbbwvo2/ZRqfkMbJrsqIj9045vg3STtZhDhYRKhpYgjqGU11eeW4Pzyrg==",
+      "path": "microsoft.openapi/1.1.4",
+      "hashPath": "microsoft.openapi.1.1.4.nupkg.sha512"
+    },
     "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.10.9": {
       "type": "package",
       "serviceable": true,
@@ -4070,6 +4155,34 @@
       "sha512": "sha512-L7ZLWjec5aPWWebsOKM6+8SdobSFMPJFIS8S8TT46oH2iELA70H95spRMeP1yPH9nDL/o+XYP29DPtVwVdzPeA==",
       "path": "superpower/2.3.0",
       "hashPath": "superpower.2.3.0.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore/5.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5EA++Cg8nzw1GCOM+7gWqrXJtylH8XMu+ixkFrbRIhRSMiZLzVPCFnSgAvJn+hCyi+AipUoJbBYv1BjvugieSw==",
+      "path": "swashbuckle.aspnetcore/5.4.1",
+      "hashPath": "swashbuckle.aspnetcore.5.4.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Swagger/5.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EY9ILzyXCAdAOmbbBM1LCTGO/T/hcRv16GrmwHWLqcBTOzZQ1lX6hUG+0BDu0xt1ti6TWMTfqEGOojsGYE5rbg==",
+      "path": "swashbuckle.aspnetcore.swagger/5.4.1",
+      "hashPath": "swashbuckle.aspnetcore.swagger.5.4.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/5.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HH98jkSlJX16xyt/GRzjYs9SHekQTxT6Orok29smdrQ9usBkO8B2dBlUBxCLuupsch8ol46Oq/Apx3wve0LJTg==",
+      "path": "swashbuckle.aspnetcore.swaggergen/5.4.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.5.4.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/5.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YhRB2iqO/DILvWWxgzckPefxTwjJc9jPT1NjqEW/DPcYLP8CeR4/wII0h4mnV92pDcItPD5FVFT8yNotGmWViw==",
+      "path": "swashbuckle.aspnetcore.swaggerui/5.4.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggerui.5.4.1.nupkg.sha512"
     },
     "System.AppContext/4.1.0": {
       "type": "package",

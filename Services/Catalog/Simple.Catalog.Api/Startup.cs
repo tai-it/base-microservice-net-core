@@ -18,6 +18,7 @@ namespace Simple.Catalog.Api
     using Serilog;
     using Simple.Catalog.Api.Infrastructure.Filters;
     using System.IO;
+    using Microsoft.OpenApi.Models;
 
     public class Startup
     {
@@ -63,6 +64,29 @@ namespace Simple.Catalog.Api
                 .AddNewtonsoftJson(options =>
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
                 );
+
+            // Register the Swagger generator, defining one or more Swagger documents
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Microservice API",
+                    Description = "Microservice API",
+                    TermsOfService = null,
+                    Contact = new OpenApiContact { Name = "TRAN VAN TAI", Email = "ngoctai.dev@gmail.com", Url = new Uri("mailto:ngoctai.dev@gmail.com") },
+                });
+
+                c.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme
+                {
+                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey
+                });
+
+                c.DescribeAllParametersInCamelCase();
+            });
 
             services.AddSingleton(Configuration);
 
@@ -134,6 +158,16 @@ namespace Simple.Catalog.Api
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Microservice API V1");
             });
 
             // auto migration

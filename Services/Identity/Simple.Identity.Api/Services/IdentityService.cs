@@ -40,6 +40,7 @@
 
         public async Task<ResponseModel> LoginAsync(LoginDto model)
         {
+            throw new NotImplementedException();
             var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, false, false);
             if (result.Succeeded)
             {
